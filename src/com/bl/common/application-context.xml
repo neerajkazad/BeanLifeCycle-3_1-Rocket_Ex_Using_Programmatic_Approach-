@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd" default-init-method="prepare"
+	default-destroy-method="release">
+
+	<bean id="rocket" class="com.bl.beans.Rocket" >
+		<constructor-arg value="10"></constructor-arg>
+		<property name="level" value="100"></property>
+	</bean>
+	
+	<bean id="moonRocket" class="com.bl.beans.Rocket">
+		<constructor-arg value="10"></constructor-arg>
+		<property name="level" value="0"></property>
+	</bean>
+	
+	<!-- init-method="prepare" destroy-method="release" -->
+</beans>
